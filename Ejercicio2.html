@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Empresa de Servicios</title>
+
+  <style>
+
+    /* Estilos para la sección de preguntas frecuentes */
+    section#faq {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    section#faq h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Estilos para las preguntas y respuestas */
+    .faq-question {
+        margin-bottom: 20px;
+    }
+
+    .faq-question h3 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .faq-question p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    
+    /* Estilos para la sección de precios */
+    section#precios {
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    section#precios h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Estilos para cada tarjeta de precio */
+    .price-table {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .price-card {
+        max-width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;
+        background-color: #fff;
+        margin: 10px;
+        transition: transform 0.2s;
+    }
+
+    .price-card:hover {
+        transform: scale(1.05);
+    }
+
+    .price-card h3 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .price-card p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .price-card .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #007BFF;
+    }
+
+    .price-card ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .price-card ul li {
+        margin: 5px 0;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+
+    /* Estilos para la sección de noticias */
+    section#noticias {
+        background-color: #fff;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    section#noticias h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Estilos para cada noticia */
+    .news {
+        margin-bottom: 20px;
+    }
+
+    .news img {
+        max-width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .news h3 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .news p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .news a {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 5px 10px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .news a:hover {
+        background-color: #0056b3;
+    }
+
+    body {
+        background-color: #f2f2f2;
+    }
+
+    section {
+        background-color: #fff;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin: 10px 0;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #14140F;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    nav ul {
+        list-style: none;
+    }
+
+    nav li {
+        display: inline;
+        margin: 0 20px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px;
+        background-color: #fff;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #007BFF;
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>ULTRASYSSOFTWARE S.A</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#descripcion">Descripción</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#testimoniales">Testimoniales</a></li>
+                <li><a href="#formulario">Contacto</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Presentación</h2>
+        <p>Brindamos asesoría y servicios personalizados de diseño y arquitectura de software</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Información de Contacto</h2>
+        <p>Dirección: Av de los shirus mz 304</p>
+        <p>Teléfono: 0912345678</p>
+        <p>Correo Electrónico: info@ulsyssa.com</p>
+    </section>
+
+    <section id="descripcion">
+        <h2>Descripción de la Empresa</h2>
+        <p>Tenemos más de 15 años de experiencia en la industria del software</p>
+    </section>
+
+  <section id="portafolio">
+      <h2>Portafolio</h2>
+      <p>Aquí te presentamos algunos ejemplos de nuestro trabajo:</p>
+
+      <div class="portfolio-item">
+          <img src="https://th.bing.com/th/id/OIP.LaA6CsIeWgg19K2xiEgymQHaD4?pid=ImgDet&rs=1" alt="Proyecto 1">
+          <h3>Proyecto 1</h3>
+          <p>Descripción breve del Proyecto 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="portfolio-item">
+          <img src="https://th.bing.com/th/id/OIP.LaA6CsIeWgg19K2xiEgymQHaD4?pid=ImgDet&rs=1" alt="Proyecto 2">
+          <h3>Proyecto 2</h3>
+          <p>Descripción breve del Proyecto 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <div class="portfolio-item">
+          <img src="https://th.bing.com/th/id/OIP.LaA6CsIeWgg19K2xiEgymQHaD4?pid=ImgDet&rs=1" alt="Proyecto 3">
+          <h3>Proyecto 3</h3>
+          <p>Descripción breve del Proyecto 3. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      </div>
+  </section>
+
+
+  <section id="testimoniales">
+      <h2>Testimoniales</h2>
+      <p>Lo que nuestros clientes dicen sobre nosotros:</p>
+
+      <ul class="testimonials">
+          <li>
+              <div class="testimonial">
+                  <p>"Estoy muy satisfecho con el trabajo de la empresa. El equipo fue profesional, eficiente y entregó un resultado excepcional. Sin duda, los recomendaría."</p>
+                  <p class="client-info">- Juan Pérez, CEO de XYZ Company</p>
+              </div>
+          </li>
+          <li>
+              <div class="testimonial">
+                  <p>"La empresa de servicios ha superado mis expectativas. Han demostrado un profundo conocimiento en su campo y han sido increíblemente receptivos a nuestras necesidades. ¡Gran trabajo!"</p>
+                  <p class="client-info">- María González, Directora de Marketing</p>
+              </div>
+          </li>
+          <li>
+              <div class="testimonial">
+                  <p>"Nuestro proyecto se completó a tiempo y dentro del presupuesto. La comunicación fue excelente, y el equipo de la empresa siempre estuvo dispuesto a ayudar. Los recomendaría a cualquiera."</p>
+                  <p class="client-info">- Carlos Rodríguez, Gerente de Proyecto</p>
+              </div>
+          </li>
+      </ul>
+  </section>
+
+
+  <section id="formulario">
+      <h2>Contáctanos</h2>
+      <form action="enviar.php" method="POST">
+          <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+              <label for="correo">Correo Electrónico:</label>
+              <input type="email" id="correo" name="correo" required>
+          </div>
+          <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+      </form>
+  </section>
+
+  <section id="noticias">
+      <h2>Noticias</h2>
+
+      <article class="news">
+          <img src="https://th.bing.com/th/id/R.a060b3adfb73c210e3fe1bdf0bb27d19?rik=Wnea4IX3jbZHXg&pid=ImgRaw&r=0" alt="Noticia 1">
+          <h3>Descubrimiento Científico Revoluciona la Energía Renovable</h3>
+          <p>Fecha: 28 de Octubre, 2023</p>
+          <p>Científicos de renombre han anunciado un avance revolucionario en la captura de energía solar que promete mejorar significativamente la eficiencia de las células solares. Este descubrimiento podría acelerar la transición global a fuentes de energía renovable.</p>
+          <a href="#">Leer más</a>
+      </article>
+
+      <article class="news">
+          <img src="https://th.bing.com/th/id/OIP._yKeE4cf0yuO5aXMu_8iHgHaEM?pid=ImgDet&rs=1" alt="Noticia 2">
+          <h3>La Inteligencia Artificial en la Atención Médica</h3>
+          <p>Fecha: 25 de Octubre, 2023</p>
+          <p>Un estudio reciente revela cómo la inteligencia artificial está revolucionando la atención médica. Los algoritmos de IA se utilizan para detectar enfermedades con mayor precisión y mejorar el diagnóstico médico, lo que promete un futuro más saludable.</p>
+          <a href="#">Leer más</a>
+      </article>
+  </section>
+
+
+
+  <section id="precios">
+      <h2>Planes y Precios</h2>
+
+      <div class="price-table">
+          <div class="price-card">
+              <h3>Plan Básico</h3>
+              <p>Un plan perfecto para comenzar.</p>
+              <p class="price">$29/mes</p>
+              <ul>
+                  <li>Función 1</li>
+                  <li>Función 2</li>
+                  <li>Soporte por correo electrónico</li>
+              </ul>
+              <a href="#contacto" class="button">Elegir Plan</a>
+          </div>
+
+          <div class="price-card">
+              <h3>Plan Avanzado</h3>
+              <p>Obtén más funciones y soporte prioritario.</p>
+              <p class="price">$59/mes</p>
+              <ul>
+                  <li>Función 1</li>
+                  <li>Función 2</li>
+                  <li>Función 3</li>
+                  <li>Soporte por correo electrónico</li>
+                  <li>Soporte telefónico</li>
+              </ul>
+              <a href="#contacto" class="button">Elegir Plan</a>
+          </div>
+
+          <div class="price-card">
+              <h3>Plan Empresarial</h3>
+              <p>El plan definitivo para empresas grandes.</p>
+              <p class="price">$99/mes</p>
+              <ul>
+                  <li>Todas las funciones</li>
+                  <li>Soporte 24/7</li>
+                  <li>Personalización completa</li>
+              </ul>
+              <a href="#contacto" class="button">Elegir Plan</a>
+          </div>
+      </div>
+  </section>
+
+
+    <section id="recursos">
+        <h2>Recursos</h2>
+        <p>Guías, tutoriales y artículos útiles para los clientes.</p>
+        <!-- Enlaces a recursos útiles aquí -->
+    </section>
+
+  <section id="faq">
+      <h2>Preguntas Frecuentes</h2>
+
+      <div class="faq-question">
+          <h3>¿Cuáles son los métodos de pago aceptados?</h3>
+          <p>Actualmente, aceptamos pagos con tarjeta de crédito y PayPal.</p>
+      </div>
+
+      <div class="faq-question">
+          <h3>¿Cuál es el tiempo de entrega de los servicios?</h3>
+          <p>El tiempo de entrega varía según el tipo de servicio. Normalmente, nuestros servicios se entregan en un plazo de 5 a 10 días hábiles.</p>
+      </div>
+
+      <div class="faq-question">
+          <h3>¿Puedo cancelar mi suscripción en cualquier momento?</h3>
+          <p>Sí, puedes cancelar tu suscripción en cualquier momento. No hay contratos a largo plazo y no aplicamos cargos de cancelación.</p>
+      </div>
+
+      <div class="faq-question">
+          <h3>¿Ofrecen soporte técnico?</h3>
+          <p>Sí, ofrecemos soporte técnico 24/7 para nuestros clientes. Puedes contactarnos a través de correo electrónico o teléfono.</p>
+      </div>
+  </section>
+
+
+    <footer>
+        <p>Derechos de Autor © 2023 ULTRASYSSOFTWARE S.A</p>
+    </footer>
+</body>
+</html>
